@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Game</title>
+    <link rel="stylesheet" href="game.css">
+</head>
+
+<body id="body" onload="load()">
+    <audio id="audioPlayer" src="audio1.mp3"></audio>
+
+<main id="main">
+<section id="outer-sec">
+    <div id="first-page-data">
+       <h2 id="head"> Guess the random number from 1/100</h2>
+       <img id="imgs" src="Screenshot (32).png" alt="logo">
+    </div>
+    <div>
+        <h3 id="level">Let's Play Quiz</h3>
+        <div id="btn">
+            <button onclick="easymode()" id="outer-btn">Easy</button></div>
+            <div id="btn">
+                <button onclick="hardmode()" id="outer-btn">Hard</button></div>
+        </div>
+</section>
+<!-- Creatin inner section -->
+<section id="inner-sec">
+<div id="hidden-btn">
+    <button id="inner-btn">New Game</button>
+</div>
+
+
+<h3 id="inner-heding" class="inner-head"></h3>
+<div id="inner-info">
+<input  type="number" 
+id="innerBox"
+min="2"
+max="100"
+placeholder="Enter Your Guess Number"
+onchange="comparedata()"
+
+>
+
+</div>
+<div id="inner-para">
+    <p id="p">Your previous Attemps</p> 
+        <span id="Attempts">0</span>
+    </div>
+    <div id="inner-para">
+        <p id="p">Your previous Guesess</p> 
+            <span id="guess">0</span>
+        </div>
+
+</section>
+</main>
+
+<script src="game.js"></script>
+
+
+</body>
+
+</html>
